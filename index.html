@@ -2,253 +2,88 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>LLegamos YA - TRASLADOS</title>
-  <meta name="description" content="Traslado de pequeños paquetes y cartas - LLegamos YA">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLegamos YA | Traslados rápidos en Rosario - Uruguay</title>
+  <meta name="description" content="Servicio de traslados rápidos de pequeños paquetes y cartas en Rosario, Uruguay. Entregas confiables y atención inmediata.">
+  <meta name="keywords" content="traslados Rosario, envíos rápidos, entregas Uruguay, paquetes, cartas, LLegamos YA">
   <style>
-    :root{
-      --bg:#0b0b0b;
-      --red:#e10600;
-      --muted:#bfbfbf;
-      --card:#121212;
-      --accent:#ff2b2b;
-      --radius:12px;
+    :root {
+      --bg: #0b0b0b;
+      --red: #e10600;
+      --muted: #bfbfbf;
+      --card: #121212;
+      --radius: 12px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:var(--muted)}
-    a{color:var(--accent);text-decoration:none}
-    header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:2px solid rgba(255,255,255,0.03)}
-    .brand{display:flex;gap:14px;align-items:center}
-    .logo{background:linear-gradient(180deg,var(--red),#b30000);color:white;padding:8px 14px;border-radius:8px;font-weight:800;font-size:18px}
-    h1{margin:0;font-size:20px;color:white;letter-spacing:0.6px}
-    main{max-width:1100px;margin:34px auto;padding:20px}
-
-    .grid{display:grid;grid-template-columns:1fr 420px;gap:24px}
-    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,0,0,0.6)}
-
-    .hero{padding:28px;border-radius:12px;background:linear-gradient(180deg, rgba(225,6,6,0.06), transparent);border:1px solid rgba(255,0,0,0.06)}
-    .hero h2{color:white;margin:0 0 8px}
-    .hero p{margin:0;color:var(--muted)}
-
-    .buttons{display:flex;gap:12px;margin-top:16px}
-    .btn{background:transparent;border:2px solid var(--red);color:var(--red);padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer}
-    .btn.primary{background:var(--red);color:white;border:none}
-    .btn.ghost{border-color:rgba(255,255,255,0.08);color:var(--muted)}
-
-    form label{display:block;font-size:13px;color:var(--muted);margin-top:12px}
-    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:white;margin-top:6px}
-    textarea{min-height:110px;resize:vertical}
-    .small{font-size:13px;color:#9a9a9a}
-
-    .socials{display:flex;gap:12px;align-items:center;margin-top:14px}
-    .social{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
-    .icon{width:20px;height:20px;display:inline-block}
-
-    footer{max-width:1100px;margin:28px auto;padding:16px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
-
-    @media (max-width:920px){
-      .grid{grid-template-columns:1fr;}
-      header{flex-direction:column;align-items:flex-start;gap:12px}
-    }
-
-    /* helper */
-    .muted{color:var(--muted)}
-    .visits{font-weight:800;color:var(--red);font-size:18px}
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--muted); }
+    header, footer { max-width: 1100px; margin: auto; padding: 16px; display: flex; justify-content: space-between; align-items: center; }
+    h1, h2, h3 { color: white; }
+    main { max-width: 1100px; margin: 20px auto; padding: 20px; }
+    .logo { background: linear-gradient(180deg, var(--red), #b30000); color: #fff; padding: 8px 14px; border-radius: 8px; font-weight: 800; }
+    .grid { display: grid; grid-template-columns: 1fr 400px; gap: 24px; }
+    .card { background: var(--card); padding: 20px; border-radius: var(--radius); box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+    a { color: var(--red); text-decoration: none; }
+    input, textarea, select, button { width: 100%; margin-top: 8px; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: transparent; color: white; }
+    button { cursor: pointer; font-weight: 700; }
+    .btn-primary { background: var(--red); border: none; color: white; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } header { flex-direction: column; gap: 10px; } }
   </style>
 </head>
 <body>
   <header>
-    <div class="brand">
-      <div class="logo">LLegamos YA</div>
-      <div>
-        <h1>TRASLADOS</h1>
-        <div class="small">Traslado rápido de pequeños paquetes y cartas</div>
-      </div>
-    </div>
-    <nav class="socials" aria-label="Redes sociales">
-      <a class="social" href="https://wa.me/598XXXXXXXX" target="_blank" rel="noopener" id="waLink">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-          <path d="M21 12.08c0 4.42-3.58 8-8 8a7.9 7.9 0 01-3.98-1.01L3 21l1.15-5.97A8 8 0 113 12.08c0-4.42 3.58-8 8-8s8 3.58 8 8z" fill="currentColor"/>
-        </svg>
-        <span class="muted">WhatsApp</span>
-      </a>
-      <a class="social" href="mailto:contacto@llegamosya.example" id="mailLink">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-          <path d="M3 6.5v11A2.5 2.5 0 005.5 20h13a2.5 2.5 0 002.5-2.5v-11A2.5 2.5 0 0018.5 4h-13A2.5 2.5 0 003 6.5z" fill="currentColor"/>
-        </svg>
-        <span class="muted">contacto@llegamosya.example</span>
-      </a>
-    </nav>
+    <div class="logo">LLegamos YA</div>
+    <h1>Traslados rápidos en Rosario, Uruguay</h1>
   </header>
 
   <main>
-    <div class="grid">
-      <section class="card">
-        <div class="hero">
-          <h2>Servicio exprés de paquetes y cartas</h2>
-          <p>En LLegamos YA trasladamos pequeños paquetes y cartas con rapidez y cuidado. Reserva un retiro o solicita una cotización.</p>
+    <section class="grid">
+      <article class="card">
+        <h2>Servicio exprés de paquetes y cartas</h2>
+        <p>En <strong>LLegamos YA</strong> realizamos traslados rápidos, seguros y confiables de pequeños paquetes y documentos en la zona de <strong>Rosario, Uruguay</strong>. Atención personalizada y confirmación inmediata por WhatsApp o correo electrónico.</p>
 
-          <div class="buttons">
-            <button class="btn primary" id="btnSolicitar">Solicitar Retiro</button>
-            <button class="btn" id="btnCotizar">Cotizar</button>
-            <button class="btn ghost" id="btnSeguimiento">Seguimiento</button>
-            <button class="btn" id="btnContacto">Contacto</button>
-          </div>
+        <h3>Cómo funciona</h3>
+        <ol>
+          <li>Completá el formulario con tus datos y detalles del envío.</li>
+          <li>Te contactamos para confirmar y cotizar.</li>
+          <li>Retiramos y entregamos con seguimiento.</li>
+        </ol>
 
-          <div style="margin-top:16px" class="small">Visitas a la página: <span class="visits" id="visitas">0</span></div>
-        </div>
+        <h3>Tipos de envío</h3>
+        <ul>
+          <li>Cartas y documentos</li>
+          <li>Paquetes pequeños (hasta 5 kg)</li>
+          <li>Entregas locales rápidas</li>
+        </ul>
+      </article>
 
-        <article style="margin-top:18px">
-          <h3 style="color:white">Cómo funciona</h3>
-          <ol class="small">
-            <li>Completá el formulario (nombre, teléfono, dirección y detalles del paquete).</li>
-            <li>Te contactamos por WhatsApp para confirmar y cotizar.</li>
-            <li>Retiramos y entregamos con seguimiento.</li>
-          </ol>
-        </article>
-
-        <article style="margin-top:18px">
-          <h3 style="color:white">Tipos de envío</h3>
-          <ul class="small">
-            <li>Cartas y documentos</li>
-            <li>Pequeños paquetes (hasta 5 kg)</li>
-            <li>Entregas locales rápidas</li>
-          </ul>
-        </article>
-      </section>
-
-      <aside class="card" aria-labelledby="formTitle">
-        <h3 id="formTitle" style="color:white;margin-top:0">Formulario de contacto / pedido</h3>
-        <form id="mainForm">
-          <label for="name">Nombre completo</label>
-          <input id="name" name="name" type="text" required placeholder="Ej. Ana Pérez">
-
-          <label for="phone">Teléfono (WhatsApp)</label>
-          <input id="phone" name="phone" type="tel" required placeholder="598 9XXXXXXXX">
-
-          <label for="email">Correo electrónico</label>
-          <input id="email" name="email" type="email" required placeholder="tunombre@ejemplo.com">
-
-          <label for="address">Dirección de retiro</label>
-          <input id="address" name="address" type="text" required placeholder="Calle, número, barrio">
-
-          <label for="type">Tipo de envío</label>
-          <select id="type" name="type" required>
+      <aside class="card">
+        <h3>Formulario de pedido</h3>
+        <form>
+          <label>Nombre completo</label>
+          <input type="text" placeholder="Ej. Ana Pérez" required>
+          <label>Teléfono (WhatsApp)</label>
+          <input type="tel" placeholder="598 9XXXXXXXX" required>
+          <label>Correo electrónico</label>
+          <input type="email" placeholder="tunombre@ejemplo.com" required>
+          <label>Dirección de retiro</label>
+          <input type="text" placeholder="Calle, número, barrio" required>
+          <label>Tipo de envío</label>
+          <select required>
             <option value="carta">Carta / Documento</option>
-            <option value="paquete">Pequeño paquete</option>
+            <option value="paquete">Paquete pequeño</option>
             <option value="otro">Otro</option>
           </select>
-
-          <label for="details">Detalles (peso estimado, dimensiones, horario preferido)</label>
-          <textarea id="details" name="details" placeholder="Ej. sobre A4, o paquete de 3kg"></textarea>
-
-          <div style="display:flex;gap:10px;margin-top:14px">
-            <button type="submit" class="btn primary" id="submitBtn">Enviar pedido</button>
-            <button type="button" class="btn" id="clearBtn">Limpiar</button>
-          </div>
-
-          <div id="formMsg" class="small" style="margin-top:12px;display:none"></div>
+          <label>Detalles del paquete</label>
+          <textarea placeholder="Ej. sobre A4 o caja de 3kg"></textarea>
+          <button type="submit" class="btn-primary">Enviar pedido</button>
         </form>
-
-        <div style="margin-top:16px" class="small">También podés contactarnos por:</div>
-        <div style="display:flex;gap:8px;margin-top:8px">
-          <a href="https://wa.me/598XXXXXXXX" target="_blank" class="btn">WhatsApp</a>
-          <a href="mailto:contacto@llegamosya.example" class="btn">Correo</a>
-        </div>
       </aside>
-    </div>
+    </section>
   </main>
 
   <footer>
-    <div class="small">© <strong>LLegamos YA</strong> • Servicio de traslado de pequeños paquetes y cartas</div>
-    <div class="small">Contador único: <span id="visitasFooter" class="visits">0</span></div>
+    <div>© 2025 LLegamos YA • Traslados rápidos en Rosario, Uruguay</div>
+    <div>Contacto: WhatsApp o correo electrónico</div>
   </footer>
-
-  <script>
-    // Contador de visitas (localStorage). Nota: esto cuenta por navegador/usuario. Para un contador global requiere backend.
-    (function(){
-      try{
-        const key = 'llegamosya_visitas_total_v1';
-        let v = localStorage.getItem(key);
-        if(!v) v = 0;
-        v = Number(v) + 1;
-        localStorage.setItem(key, String(v));
-        document.getElementById('visitas').textContent = v;
-        document.getElementById('visitasFooter').textContent = v;
-      }catch(e){
-        console.warn('No se pudo acceder a localStorage para el contador');
-      }
-    })();
-
-    // Manejo del formulario: guardamos envíos en localStorage y mostramos confirmación.
-    const form = document.getElementById('mainForm');
-    const msg = document.getElementById('formMsg');
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      const data = {
-        nombre: form.name.value.trim(),
-        telefono: form.phone.value.trim(),
-        email: form.email.value.trim(),
-        direccion: form.address.value.trim(),
-        tipo: form.type.value,
-        detalles: form.details.value.trim(),
-        fecha: new Date().toISOString()
-      };
-
-      // Guardar en localStorage (lista de envíos)
-      try{
-        const key = 'llegamosya_envios_v1';
-        const list = JSON.parse(localStorage.getItem(key) || '[]');
-        list.push(data);
-        localStorage.setItem(key, JSON.stringify(list));
-        msg.style.display = 'block';
-        msg.style.color = 'lightgreen';
-        msg.textContent = 'Pedido guardado localmente. En breve te contactaremos por WhatsApp.';
-
-        // Opcional: abrir WhatsApp con mensaje prellenado
-        const waNumber = '598XXXXXXXX'; // reemplazar por número real sin signos
-        const text = encodeURIComponent(`Hola, soy ${data.nombre}. Solicito traslado: ${data.tipo}. Tel: ${data.telefono}. Dirección: ${data.direccion}. Detalles: ${data.detalles}`);
-        // No abrir de forma automática para respetar UX; se muestra botón para abrir
-        const openWa = confirm('¿Querés abrir WhatsApp para enviar el pedido ahora?');
-        if(openWa){
-          window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
-        }
-
-        form.reset();
-      }catch(err){
-        console.error(err);
-        msg.style.display = 'block';
-        msg.style.color = '#ff8a8a';
-        msg.textContent = 'Ocurrió un error al guardar el pedido en el navegador.';
-      }
-    });
-
-    document.getElementById('clearBtn').addEventListener('click', function(){
-      if(confirm('Limpiar el formulario?')) form.reset();
-    });
-
-    // Vincular botones rápidos a acciones en la página
-    document.getElementById('btnSolicitar').addEventListener('click', ()=>{
-      document.getElementById('name').focus();
-      window.scrollTo({top:document.getElementById('mainForm').offsetTop-20,behavior:'smooth'});
-    });
-    document.getElementById('btnCotizar').addEventListener('click', ()=>{
-      alert('Para cotizar completá el formulario indicando peso/dimensiones. Te contactaremos por WhatsApp.');
-    });
-    document.getElementById('btnSeguimiento').addEventListener('click', ()=>{
-      alert('El seguimiento se coordina por WhatsApp. Envianos tu número y código de pedido (si lo tenés).');
-    });
-    document.getElementById('btnContacto').addEventListener('click', ()=>{
-      window.location.href = 'mailto:contacto@llegamosya.example';
-    });
-
-    // Accesibilidad: focus visible
-    document.addEventListener('keydown', function(e){
-      if(e.key === 'Tab') document.documentElement.style.scrollBehavior = 'smooth';
-    });
-  </script>
 </body>
 </html>
-
-
-
